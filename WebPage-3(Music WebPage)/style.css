@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --purple500: #281154;
+    --purple300: #270082;
+    --purple600: #1b0058;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+    --max-width: 1200px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section{
+    scroll-margin: 50px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+   transition: 0.2s ease-in-out;
+   opacity: 0.8;
+}
+/*Navbar*/
+ul{
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+}
+header{
+    background-color: var(--purple300);
+    position: sticky;
+    top: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    padding: 20px 0;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: larger;
+}
+
+nav ul li{
+    color: white;
+    font-weight: 300;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in;
+}
+nav ul li:hover{
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+/*Hero section*/
+.hero{
+    background-image: url(./Images/hero_image.png);
+    height: 100vh;
+    display: grid;
+    color: white;
+    place-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container h1{
+    font-size: 90px;
+}
+.container h3{
+    font-weight: 200;
+}
+.music{
+    padding-top: 50px;
+    background: var(--purple500);
+}
+
+.music .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.p-btn{
+    background-color: var(--red600);
+    color: white;
+    border-radius: 7px;
+}
+.iphone-img{
+    position: relative;
+    margin-top: -400px;
+    top: 400px;
+}
+/*Video section*/
+.video{
+    padding-top: 500px;
+}
+.video .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video .container h3{
+    font-weight: 600;
+}
+.video .container p{
+    font-weight: 500;
+}
+.s-btn{
+    background-color: var(--purple300);
+    color: white;
+    border-radius: 8px;
+}
+
+/*Additional matter*/
+
+.matter{
+    background-image: url(./Images/video.png);
+    margin-top: 50px;
+    min-height: 800px;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.matter .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -200px;
+}
+.matter .container h3{
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.matter .container p{
+    font-weight: 400;
+}
+
+/*GIft card section*/
+
+.gift-section{
+    margin-top: 50px;
+}
+.gift-section .container{
+    display: flex;
+    gap: 50px;
+}
+.gift-section .container .gif-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gift-section .container .gif-content button{
+    align-self: flex-start;
+    font-size: larger;
+}
+
+.footer-upper{
+    margin-top: 50px;
+    background-color: var(--purple600);
+    padding:20px;
+}
+.footer-upper .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    color: white;
+    padding-bottom: 30px;
+}
+.footer-upper h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+  }
+
+.footer-upper .container .footer-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-lower {
+    background-color: var(--purple300);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+
+.gift-section{
+    scroll-margin: 110px;
+}
+
+@media (max-width: 786px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container h1 {
+        font-size: 50px;
+    }
+    .hero .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .iphone-img img {
+        width: 100%; 
+        height: auto; 
+        display: block;
+        object-fit: contain; 
+    }
+    .music .container {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+    }
+    .video .container{
+        text-align: center;
+    }
+    .mac-img img{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+    .matter .container{
+        text-align: center;
+    }
+    .gift-section .container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .footer-upper .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
